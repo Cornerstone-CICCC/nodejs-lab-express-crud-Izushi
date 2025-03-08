@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee management</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Employees</h1>
+      <section>
+        <h2>List of Employees</h2>
+        <div>
+          <input type="text" placeholder="Enter first name...">
+          <button id="search">Search and View Employees</button>
+        </div>
+        <ul id="employees">
+        </ul>
+      </section>
+      <section>
+        <h2>Add Employee</h2>
+        <form>
+          <div>
+            <label>
+              First name
+              <input type="text" name="firstName">
+            </label>
+          </div>
+          <div>
+            <label>
+              Last name
+              <input type="text" name="lastName">
+            </label>
+          </div>
+          <div>
+            <label>
+              Age
+              <input type="number" name="age">
+            </label>
+          </div>
+          <div>
+            <label>
+              Married
+              <input type="checkbox" name="isMarried">
+            </label>
+          </div>
+          <button type="submit">Add Employee</button>
+        </form>
+      </section>
+      <section>
+        <h2>Edit Employee</h2>
+        <form name="editEmployee">
+          <div>
+            <label>
+              First name:
+              <input type="text" name="firstName" value="">
+            </label>
+          </div>
+          <div>
+            <label>
+              Last name:
+              <input type="text" name="lastName" value="">
+            </label>
+          </div>
+          <div>
+            <label>
+              age:
+              <input type="number" name="age" value="">
+            </label>
+          </div>
+          <div>
+            <label>
+              Married:
+              <input type="checkbox" name="isMarried" checked>
+            </label>
+          </div>
+          <button type="submit">Edit Employee</button>
+        </form>
+      </section>
+    </div>
+    <div class="right">
+      <section>
+        <h2>View Employee/s Info</h2>
+        <div id="employeeInfo"></div>
+      </section>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left, .right {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .right ul {
+      background-color: rgb(233, 232, 232);
+    }
+
+    #employeeInfo ul {
+      list-style-type: none;
+      padding: 0;
+    }
+</style>
+
+</html>
